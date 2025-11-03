@@ -92,3 +92,49 @@ nav {
         padding: 5px 0;
     }
 }
+
+
+/* Stili aggiuntivi per il Modulo PDF */
+.pdf-form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-text);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante per width: 100% */
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Modifica il cta-link per adattarsi al modulo */
+.cta-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
