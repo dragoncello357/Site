@@ -141,53 +141,65 @@
         <hr>
 
             <section id="azione" class="data-section action-final">
-        <h2>🤝 Sostieni la Riforma: Firma la Petizione</h2>
-        <p>Trasforma i dati in potere politico. Compila il modulo per generare il tuo documento di adesione e contribuire al cambiamento.</p>
-
-        <div class="pdf-form-container">
-            <div class="form-group">
-                <label for="nomeUtente">Nome e Cognome (Richiesto):</label>
-                <input type="text" id="nomeUtente" required>
-            </div>
-            <div class="form-group">
-                <label for="emailUtente">Email di Riferimento (Non obbligatoria):</label>
-                <input type="email" id="emailUtente">
-            </div>
-            <div class="form-group">
-                <label for="propostaUtente">Proposta Personale (Opzionale):</label>
-                <textarea id="propostaUtente" rows="4" placeholder="Inserisci qui la tua specifica proposta o commento..."></textarea>
-            </div>
-
-            <button class="cta-link" onclick="generaPDF()">Genera e Firma il Documento</button>
+    <h2>🤝 Sostieni la Riforma: Firma la Petizione</h2>
+    <p>Trasforma i dati in potere politico. Compila il modulo per generare il tuo documento di adesione e contribuire al cambiamento.</p>
+    
+    <div class="pdf-form-container">
+        <div class="form-group">
+            <label for="nomeUtente">Nome e Cognome (Richiesto):</label>
+            <input type="text" id="nomeUtente" required>
         </div>
-
-        <div id="pdfContent" style="display:none; padding: 20px; font-size: 10px; line-height: 1.5;">
-            <h1 style="text-align: center; color: #007bff; font-size: 16px; margin-bottom: 20px;">Documento di Adesione e Impegno Civico - Sicilia Dati & Riforma</h1>
-
-            <h2 style="font-size: 12px; border-bottom: 1px solid #ccc;">1. Dati del Sostenitore</h2>
-            <p><strong>Nome e Cognome:</strong> <span id="pdfNome"></span></p>
-            <p><strong>Email di Riferimento:</strong> <span id="pdfEmail"></span></p>
-
-            <h2 style="font-size: 12px; border-bottom: 1px solid #ccc; margin-top: 15px;">2. Informativa sulla Protezione Dati (GDPR)</h2>
-            <p style="text-align: justify;">
-                Il presente documento ha valore di petizione civile e supporto a iniziative politiche di riforma. I dati personali (nome e cognome) sono raccolti e trattati unicamente per attestare l'adesione al manifesto "Sicilia Dati & Riforma" e a supporto delle proposte di riforma strutturale. Il trattamento avviene in conformità con il Regolamento Generale sulla Protezione dei Dati (GDPR - Regolamento UE 2016/679). I dati non saranno ceduti a terzi per finalità commerciali. Il Titolare del Trattamento è il Comitato Promotore del progetto. Il sostenitore ha il diritto di accedere, rettificare o cancellare i propri dati in qualsiasi momento, inviando richiesta all'indirizzo email di riferimento del progetto. Con la firma, si dichiara di aver letto e compreso la presente informativa. Il mancato consenso al trattamento dei dati essenziali (Nome e Cognome) rende nulla l'adesione. Il sostenitore conferma di aver fornito dati veritieri.
-            </p>
-
-            <h2 style="font-size: 12px; border-bottom: 1px solid #ccc; margin-top: 15px;">3. Proposta/Commento del Sostenitore</h2>
-            <div style="background-color: #f0f8ff; padding: 10px; border-left: 3px solid #007bff; min-height: 50px;">
-                <p id="pdfProposta"></p>
-            </div>
-
-            <div style="margin-top: 50px; text-align: right;">
-                <div style="width: 250px; border: 1px dashed #333; height: 50px; margin-bottom: 5px; display: inline-block;">
-                    </div>
-                <p style="margin: 0; padding-right: 50px;">Firma</p>
-                <p style="margin-top: 5px; padding-right: 50px;">_________________________</p>
-                <p style="margin-top: 5px; padding-right: 50px;">(<span id="pdfFirmaNome"></span>)</p>
-            </div>
+        <div class="form-group">
+            <label for="emailUtente">Email di Riferimento (Non obbligatoria):</label>
+            <input type="email" id="emailUtente">
         </div>
-
+        <div class="form-group">
+            <label for="propostaUtente">Proposta Personale (Opzionale):</label>
+            <textarea id="propostaUtente" rows="4" placeholder="Inserisci qui la tua specifica proposta o commento..."></textarea>
+        </div>
+        
+        <div class="form-group consent-checkbox">
+            <input type="checkbox" id="consensoPubblicazione" required>
+            <label for="consensoPubblicazione">Io [Nome e Cognome] accetto la pubblicazione anonima di questa referenza o documento ai fini di contribuire al progetto "Sicilia Dati & Riforma".</label>
+        </div>
+        
+        <button class="cta-link" onclick="generaPDF()">Genera e Firma il Documento</button>
+    </div>
+    
     </section>
+
+<section id="riforma-fiscale" class="data-section">
+    <h2>📈 La Riforma Fiscale Proposta: Un Circolo Virtuoso</h2>
+    <p class="summary">La nostra visione supera la logica "tasse alte = più incasso". Diminuire il carico fiscale ora significa attrarre maggiori investimenti e lavoratori, generando un gettito complessivo superiore in futuro.</p>
+    
+    <div class="data-box blue-accent">
+        <h3>Proiezione Gettito Fiscale Regionale (Scenario Attuale vs. Scenario Riforma)</h3>
+        <div class="chart-container">
+            
+            <div class="simulated-line-chart">
+                <div class="line-data current-scenario">
+                    <span style="left: 0;">2025: X Mil.</span>
+                    <span style="left: 33%;">2028: Y Mil.</span>
+                    <span style="left: 66%;">2031: Z Mil.</span>
+                    <span style="left: 99%;">2034: W Mil.</span>
+                </div>
+                <div class="line-data reform-scenario">
+                    <span style="left: 0;">2025: X-10% Mil.</span>
+                    <span style="left: 33%;">2028: Y+5% Mil.</span>
+                    <span style="left: 66%;">2031: Z+20% Mil.</span>
+                    <span style="left: 99%;">2034: W+50% Mil.</span>
+                </div>
+                <div class="chart-legend">
+                    <span class="legend-current">Scenario Attuale</span>
+                    <span class="legend-reform">Scenario Riforma Fiscale</span>
+                </div>
+            </div>
+        </div>
+        <p class="data-source">Fonte: Stime interne su dati ISTAT e Banca d'Italia.</p>
+        <p class="explanation"><strong>Il Vantaggio della Riforma:</strong> Sebbene ci sia una potenziale diminuzione iniziale del gettito (linea rossa), la maggiore attrattività per imprese e lavoratori (più "base imponibile") porta a una crescita esponenziale dei ricavi fiscali nel medio-lungo periodo (linea verde), superando di gran lunga lo scenario attuale. **È un investimento sul futuro, non una perdita.**</p>
+    </div>
+</section>
+
 
 
     </main>
