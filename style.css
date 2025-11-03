@@ -1,9 +1,9 @@
-/* Stile Generale e Reset */
+/* Stile Generale e Reset (mantenuto) */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding-top: 60px; /* Aggiunto spazio per la navbar fissa */
+    padding-top: 105px; /* AUMENTATO per fare spazio alla navbar fissa e alla piccola area header! */
     background-color: #F8F8F8;
     color: #333;
     scroll-behavior: smooth; 
@@ -11,178 +11,84 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1100px; /* Leggermente più stretto per una migliore leggibilità */
+    max-width: 1100px; 
     margin: auto;
     overflow: hidden;
 }
 
-/* Colori di Accento */
-:root {
-    --color-primary: #FFFFFF;
-    --color-accent-blue: #007bff; /* Blu Profondo, pulito */
-    --color-accent-green: #28a745; 
-    --color-text: #333;
-    --color-light-gray: #EFEFEF;
-}
-
-/* Header (Autorità) */
+/* Header (Autorità) - Rende la navbar fissa ma non nasconde il contenuto */
 header {
     background-color: var(--color-primary);
     color: var(--color-text);
-    padding: 20px 0 0 0; /* Ridotto il padding superiore */
+    padding: 20px 0 0 0; 
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombra più sottile e definita */
-    
-    /* Rende l'header fisso in alto */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Ombra definita */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
 
-header h1 {
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 2.2em; /* Leggermente più piccolo */
-    font-weight: 700;
-    color: var(--color-accent-blue);
-    margin: 0 0 5px 0;
-}
-
-header p {
-    font-size: 1em;
-    font-weight: 300; /* Font più leggero per un look moderno */
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* Menu di Navigazione (Risolve i Pallini a lato e rende la barra più sottile) */
+/* Modifiche al NAV: assicura che il menu sia sotto il titolo e ben visibile */
 nav {
     background-color: var(--color-accent-blue);
     width: 100%;
+    margin-top: 10px; /* Aggiunto piccolo spazio sotto il titolo */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto; /* Centra il menu */
-    display: flex;
-    justify-content: center;
-    max-width: 1100px; /* Allineato al container */
-}
 
-nav li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 18px; /* Padding più sottile */
-    font-weight: 600; 
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-}
-
-nav li a:hover {
-    background-color: #0056b3;
-}
-
-/* Sezioni Dati (Meno "sfogli") */
+/* Sezioni Dati (Risponde al problema del testo troppo largo) */
 .data-section {
-    padding: 40px; /* Aumentato il padding interno */
+    padding: 40px; 
     background-color: var(--color-primary);
     margin-top: 30px;
     border-radius: 4px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08); /* Ombra definita ma sottile */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08); 
 }
 
 .home-intro {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px; /* Ridotto il padding superiore, compensato nel BODY */
+    padding-bottom: 20px;
 }
 
 .data-section h2 {
     color: var(--color-text);
     text-align: center;
-    margin-bottom: 5px; /* Ridotto lo spazio per un look più compatto */
+    margin-bottom: 5px; 
     font-weight: 600; 
     font-size: 1.7em;
+    padding-top: 20px; /* Aggiunto padding qui per evitare che il titolo si attacchi al bordo superiore */
 }
 
+/* LIMITAZIONE CRUCIALE DELLA LARGHEZZA TESTUALE (Rende il sito meno "sfogli") */
 .summary {
     text-align: center;
     color: #444;
-    margin-bottom: 30px;
-    font-weight: 300; /* Testo più leggero */
-    padding: 0 40px; /* Aumentato il padding per non appiccicare il testo */
+    margin: 0 auto 30px auto; /* Centra il blocco di testo */
+    font-weight: 300; 
+    padding: 0 40px;
+    max-width: 800px; /* **LIMITE DI LARGHEZZA** per il testo di riassunto */
 }
 
-/* --- (Gli stili per i grafici e i box rimanenti possono restare invariati se funzionano) --- */
-
-/* Ripulitura finale */
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #ddd; /* Linea di separazione più pulita */
-    margin: 50px 0;
+.explanation {
+    /* Mantenuto stile precedente, ma aggiungiamo il limite di larghezza */
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    /* ... il resto dello stile explanation ... */
 }
 
-/* Media Query per Mobile (Essenziale per la definizione) */
+/* Media Query per Mobile */
 @media (max-width: 768px) {
     body {
-        padding-top: 90px; /* Spazio per la navbar su due righe se necessario */
+        padding-top: 130px; /* Più spazio per il menu che va a capo */
     }
     header h1 {
         font-size: 1.5em;
     }
     nav ul {
-        flex-wrap: wrap; /* Permette al menu di andare a capo */
+        flex-wrap: wrap; 
         padding: 5px 0;
     }
-    nav li a {
-        padding: 8px 12px;
-    }
-    .data-section {
-        padding: 20px;
-    }
-}/* Stili aggiuntivi per il Modulo PDF */
-.pdf-form-container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: var(--color-light-gray);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: var(--color-text);
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Importante per width: 100% */
-    font-size: 1em;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-/* Modifica il cta-link per adattarsi al modulo */
-.cta-link {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 25px;
 }
