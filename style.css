@@ -1,0 +1,190 @@
+/* Stile Generale e Reset */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8; /* Sfondo leggermente staccato dal bianco puro */
+    color: #333; /* Grigio Antracite per testo */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Colori di Accento */
+:root {
+    --color-primary: #FFFFFF;
+    --color-accent-blue: #007bff; /* Blu Elettrico/Profondo */
+    --color-accent-green: #28a745; /* Verde Smeraldo Serio */
+    --color-text: #333;
+    --color-light-gray: #EFEFEF;
+}
+
+/* Header (Autorità) */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--color-accent-blue);
+    margin: 0 0 10px 0;
+}
+
+/* Sezioni Dati */
+.data-section {
+    padding: 40px 0;
+    background-color: var(--color-primary);
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.data-section h2 {
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.summary {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+    padding: 0 20px;
+}
+
+/* Box Dati (Pulizia e Accenti) */
+.data-box {
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 6px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.blue-accent {
+    border: 1px solid var(--color-accent-blue);
+    background-color: #e6f2ff;
+}
+
+.green-accent {
+    border: 1px solid var(--color-accent-green);
+    background-color: #e6ffe6;
+}
+
+.data-box h3 {
+    color: var(--color-text);
+    margin-top: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.data-chart, .simulated-data {
+    max-width: 100%;
+    height: auto;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 20px;
+    color: var(--color-text);
+}
+
+.simulated-data span {
+    color: var(--color-accent-blue);
+    font-size: 1.2em;
+}
+
+.data-source {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 15px;
+}
+
+/* Bottone CTA (Call to Action) */
+.cta-button {
+    background-color: var(--color-accent-blue);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Sezione Proposta (Nascosta all'inizio) */
+.proposta {
+    display: none;
+    background-color: var(--color-light-gray);
+    border-left: 5px solid var(--color-accent-green);
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* Sezione Finale */
+.action-final {
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.cta-link {
+    display: inline-block;
+    background-color: var(--color-accent-green);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-link:hover {
+    background-color: #1e7e34;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 50px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Media Query per Mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+}
