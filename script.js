@@ -25,15 +25,21 @@ function mostraProposta(sezioneId) {
 /**
  * Funzione per generare il PDF dinamico con i dati dell'utente.
  * Utilizza html2canvas per trasformare il contenuto HTML in un'immagine e jspdf per creare il PDF.
- */
+ */// La funzione 'generaPDF' in script.js deve essere modificata così:
 function generaPDF() {
     // 1. Raccogli i dati dal modulo
     const nome = document.getElementById('nomeUtente').value.trim();
     const email = document.getElementById('emailUtente').value.trim();
     const proposta = document.getElementById('propostaUtente').value.trim() || 'Nessuna proposta specifica aggiunta.';
+    const consenso = document.getElementById('consensoPubblicazione');
 
     if (!nome) {
         alert("Per generare il documento, il campo 'Nome e Cognome' è obbligatorio.");
+        return;
+    }
+    
+    if (!consenso.checked) {
+        alert("Devi accettare la clausola di consenso per poter generare il documento.");
         return;
     }
 
@@ -46,18 +52,16 @@ function generaPDF() {
     const content = document.getElementById('pdfContent');
 
     // 3. Usa html2canvas per renderizzare il div come immagine
-    // window.jsPDF è reso disponibile dalla libreria caricata nell'HTML
     const { jsPDF } = window.jspdf;
 
-    // Mostra il contenuto temporaneamente per la corretta renderizzazione
     content.style.display = 'block';
 
     html2canvas(content, { 
-        scale: 2, // Aumenta la risoluzione per una migliore qualità del PDF
+        scale: 2, 
         useCORS: true 
     }).then(canvas => {
         const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'mm', 'a4'); // 'p' per portrait, 'mm' per millimetri
+        const pdf = new jsPDF('p', 'mm', 'a4');
         
         const imgProps= pdf.getImageProperties(imgData);
         const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -68,9 +72,21 @@ function generaPDF() {
         // 4. Salva il PDF
         pdf.save(`Adesione_Riforma_${nome.replace(/\s/g, '_')}.pdf`);
 
-        // Nascondi di nuovo il contenuto dopo la generazione
         content.style.display = 'none';
     });
+}
+
+// Aggiunto stile per la casella di consenso
+.consent-checkbox {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.9em;
+}
+
+.consent-checkbox input {
+    margin-right: 10px;
+    margin-top: 3px; /* Allinea il checkbox con la label */
 }
 
 // Nota: A causa della tua giovane età, ti consiglio di non includere un sistema di 
