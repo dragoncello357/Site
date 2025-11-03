@@ -6,6 +6,7 @@
     <title>Sicilia Dati & Riforma | Analisi e Proposte per il Futuro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,28 +14,54 @@
         <div class="container">
             <h1>SICILIA DATI & RIFORMA</h1>
             <p>Misurare il Divario per Costruire il Futuro Europeo della Sicilia.</p>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#salari">Il Barometro Salariale</a></li>
+                    <li><a href="#burocrazia">Il Freno Burocratico</a></li>
+                    <li><a href="#riforma-fiscale">La Riforma Fiscale</a></li>
+                    <li><a href="#azione">Unisciti al Progetto</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main class="container">
         
+        <section id="home" class="data-section">
+            <h2>Introduzione: Il Futuro della Sicilia è nei Dati</h2>
+            <p class="summary">La nostra missione è analizzare oggettivamente le criticità economiche e sociali della Sicilia, confrontandole con modelli virtuosi come la Germania, per proporre soluzioni concrete e misurabili. Crediamo che la trasparenza e l'efficienza siano la chiave per sbloccare il potenziale inespresso della nostra terra.</p>
+        </section>
+
         <section id="salari" class="data-section">
             <h2>📊 Il Barometro Salariale: Italia vs. Germania</h2>
-            <p class="summary">La stagnazione trentennale dei salari in Italia scoraggia il lavoro qualificato e l'investimento, rendendo l'emigrazione l'unica soluzione per i giovani.</p>
+            <p class="summary">La stagnazione trentennale dei salari in Italia, acuita dall'alto costo del lavoro per le imprese e dal basso netto per i lavoratori, scoraggia l'investimento e spinge all'emigrazione. Confrontiamo la realtà siciliana con un modello di successo.</p>
             
             <div class="data-box blue-accent">
-                <h3>Salario Netto Medio di Partenza (Settore Privato)</h3>
+                <h3>Confronto Salario Netto e Cuneo Fiscale (Esempio: Costo Azienda €3000/mese)</h3>
                 <div class="chart-container">
-                    <img src="grafico-salari.png" alt="Grafico confronto salari Italia Germania" class="data-chart">
+                    <div class="simulated-chart">
+                        <div class="chart-bar-group">
+                            <div class="chart-bar italia" style="height: 60%;"></div>
+                            <div class="chart-label">Italia (Netto: ~€1600)</div>
+                            <div class="chart-sub-label">Cuneo Fiscale: ~47%</div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="chart-bar germania" style="height: 90%;"></div>
+                            <div class="chart-label">Germania (Netto: ~€2400)</div>
+                            <div class="chart-sub-label">Cuneo Fiscale: ~48%</div>
+                        </div>
+                    </div>
                 </div>
-                <p class="data-source">Fonte: Eurostat, Banca d'Italia (Dati elaborati).</p>
+                <p class="data-source">Fonte: Eurostat, OCSE (Dati elaborati su costo azienda standard).</p>
+                <p class="explanation"><strong>Debolezza Attuale:</strong> Nonostante un cuneo fiscale simile alla Germania, il punto di partenza (salario lordo e produttività) in Italia è molto più basso. L'azienda paga tanto ma il lavoratore riceve poco, bloccando sia assunzioni che potere d'acquisto.</p>
             </div>
 
             <div class="action-box">
                 <button class="cta-button" onclick="mostraProposta('salari')">Vedi Proposta di Riforma</button>
             </div>
             <div id="proposta-salari" class="proposta">
-                <p><strong>Proposta:</strong> Taglio mirato del Cuneo Fiscale sulla prima fascia di reddito per aumentare il netto in busta paga del 10%, finanziato dalla riduzione degli enti regionali inutili.</p>
+                <p><strong>Proposta:</strong> **Taglio Selettivo del Cuneo Fiscale Regionale:** Riduzione dell'addizionale regionale IRPEF e IRAP per le prime fasce di reddito e per le nuove assunzioni stabili. Questo aumenta direttamente il netto in busta paga e rende più conveniente assumere, stimolando la domanda e l'offerta di lavoro qualificato.</p>
             </div>
         </section>
 
@@ -42,30 +69,73 @@
 
         <section id="burocrazia" class="data-section">
             <h2>🛑 Il Freno Burocratico: Costi e Tempi</h2>
-            <p class="summary">La lentezza amministrativa e la mancata spesa dei fondi PNRR rappresentano il costo occulto che affonda le piccole imprese oneste.</p>
+            <p class="summary">La lentezza amministrativa e la gestione inefficiente dei fondi pubblici sono un costo implicito per le imprese, scoraggiando gli investimenti che genererebbero occupazione e ricchezza.</p>
             
             <div class="data-box green-accent">
-                <h3>Tasso di Spesa PNRR (Media regionale)</h3>
+                <h3>Tempistiche Burocratiche (Esempio: Apertura Attività, Stima in Giorni)</h3>
                 <div class="chart-container">
-                    <p class="simulated-data">Sicilia: <span>35%</span> &nbsp;&nbsp;|&nbsp;&nbsp; Media Italia Nord: <span>70%</span></p>
+                    <div class="simulated-chart horizontal">
+                        <div class="chart-bar-group">
+                            <div class="chart-bar italia-time" style="width: 70%;"></div>
+                            <div class="chart-label">Sicilia: ~120 giorni</div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="chart-bar germania-time" style="width: 30%;"></div>
+                            <div class="chart-label">Germania: ~30 giorni</div>
+                        </div>
+                    </div>
                 </div>
-                <p class="data-source">Fonte: Dipartimento per gli Affari Europei (Dati elaborati).</p>
+                <p class="data-source">Fonte: World Bank, Indice Doing Business (Dati elaborati).</p>
+                <p class="explanation"><strong>Debolezza Attuale:</strong> Il tempo è denaro. Un processo di apertura attività 4 volte più lungo significa costi maggiori, opportunità perse e un forte disincentivo per chi vuole investire o creare una nuova impresa in Sicilia.</p>
             </div>
 
             <div class="action-box">
                 <button class="cta-button" onclick="mostraProposta('burocrazia')">Vedi Proposta di Riforma</button>
             </div>
             <div id="proposta-burocrazia" class="proposta">
-                <p><strong>Proposta:</strong> Istituzione di una "Zona a Burocrazia Zero" (ZBZ) digitale per le PMI che investono in tecnologia e assumono a tempo indeterminato, con processi di autorizzazione in 30 giorni.</p>
+                <p><strong>Proposta:</strong> **Sportello Unico Digitale per l'Impresa (SUDI):** Implementazione di una piattaforma digitale unica regionale per tutti i permessi e le autorizzazioni, con tempi massimi garantiti e sanzioni per i ritardi. Questo taglia i costi, elimina la discrezionalità e attira investimenti.</p>
             </div>
         </section>
         
         <hr>
-        
+
+        <section id="riforma-fiscale" class="data-section">
+            <h2>📈 La Riforma Fiscale Proposta: Un Circolo Virtuoso</h2>
+            <p class="summary">La nostra visione supera la logica "tasse alte = più incasso". Diminuire il carico fiscale ora significa attrarre maggiori investimenti e lavoratori, generando un gettito complessivo superiore in futuro.</p>
+            
+            <div class="data-box blue-accent">
+                <h3>Proiezione Gettito Fiscale Regionale (Scenario Attuale vs. Scenario Riforma)</h3>
+                <div class="chart-container">
+                    <div class="simulated-line-chart">
+                        <div class="line-data current-scenario">
+                            <span style="left: 0;">2025: X Mil.</span>
+                            <span style="left: 33%;">2028: Y Mil.</span>
+                            <span style="left: 66%;">2031: Z Mil.</span>
+                            <span style="left: 99%;">2034: W Mil.</span>
+                        </div>
+                        <div class="line-data reform-scenario">
+                            <span style="left: 0;">2025: X-10% Mil.</span>
+                            <span style="left: 33%;">2028: Y+5% Mil.</span>
+                            <span style="left: 66%;">2031: Z+20% Mil.</span>
+                            <span style="left: 99%;">2034: W+50% Mil.</span>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-current">Scenario Attuale</span>
+                            <span class="legend-reform">Scenario Riforma Fiscale</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="data-source">Fonte: Stime interne su dati ISTAT e Banca d'Italia.</p>
+                <p class="explanation"><strong>Il Vantaggio della Riforma:</strong> Sebbene ci sia una potenziale diminuzione iniziale del gettito (linea rossa), la maggiore attrattività per imprese e lavoratori (più "base imponibile") porta a una crescita esponenziale dei ricavi fiscali nel medio-lungo periodo (linea verde), superando di gran lunga lo scenario attuale. **È un investimento sul futuro, non una perdita.**</p>
+            </div>
+        </section>
+
+        <hr>
+
         <section id="azione" class="data-section action-final">
             <h2>🤝 Dalla Critica all'Azione: Unisciti al Progetto</h2>
-            <p>La politica del futuro ha bisogno di dati e trasparenza. Contribuisci con la tua esperienza, i tuoi dati o le tue proposte concrete.</p>
-            <a href="#" class="cta-link">INVIA LA TUA PROPOSTA DI RIFORMA</a>
+            <p>La politica del futuro ha bisogno di dati e trasparenza. Contribuisci con la tua esperienza, i tuoi dati o le tue proposte concrete. Insieme possiamo costruire la Sicilia che meritiamo.</p>
+            <a href="mailto:tuaemail@esempio.com?subject=La Mia Proposta per la Sicilia" class="cta-link">INVIA LA TUA PROPOSTA DI RIFORMA</a>
         </section>
 
     </main>
