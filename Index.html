@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicilia Dati & Riforma | Analisi e Proposte per il Futuro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>SICILIA DATI & RIFORMA</h1>
+            <p>Misurare il Divario per Costruire il Futuro Europeo della Sicilia.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="salari" class="data-section">
+            <h2>📊 Il Barometro Salariale: Italia vs. Germania</h2>
+            <p class="summary">La stagnazione trentennale dei salari in Italia scoraggia il lavoro qualificato e l'investimento, rendendo l'emigrazione l'unica soluzione per i giovani.</p>
+            
+            <div class="data-box blue-accent">
+                <h3>Salario Netto Medio di Partenza (Settore Privato)</h3>
+                <div class="chart-container">
+                    <img src="grafico-salari.png" alt="Grafico confronto salari Italia Germania" class="data-chart">
+                </div>
+                <p class="data-source">Fonte: Eurostat, Banca d'Italia (Dati elaborati).</p>
+            </div>
+
+            <div class="action-box">
+                <button class="cta-button" onclick="mostraProposta('salari')">Vedi Proposta di Riforma</button>
+            </div>
+            <div id="proposta-salari" class="proposta">
+                <p><strong>Proposta:</strong> Taglio mirato del Cuneo Fiscale sulla prima fascia di reddito per aumentare il netto in busta paga del 10%, finanziato dalla riduzione degli enti regionali inutili.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="burocrazia" class="data-section">
+            <h2>🛑 Il Freno Burocratico: Costi e Tempi</h2>
+            <p class="summary">La lentezza amministrativa e la mancata spesa dei fondi PNRR rappresentano il costo occulto che affonda le piccole imprese oneste.</p>
+            
+            <div class="data-box green-accent">
+                <h3>Tasso di Spesa PNRR (Media regionale)</h3>
+                <div class="chart-container">
+                    <p class="simulated-data">Sicilia: <span>35%</span> &nbsp;&nbsp;|&nbsp;&nbsp; Media Italia Nord: <span>70%</span></p>
+                </div>
+                <p class="data-source">Fonte: Dipartimento per gli Affari Europei (Dati elaborati).</p>
+            </div>
+
+            <div class="action-box">
+                <button class="cta-button" onclick="mostraProposta('burocrazia')">Vedi Proposta di Riforma</button>
+            </div>
+            <div id="proposta-burocrazia" class="proposta">
+                <p><strong>Proposta:</strong> Istituzione di una "Zona a Burocrazia Zero" (ZBZ) digitale per le PMI che investono in tecnologia e assumono a tempo indeterminato, con processi di autorizzazione in 30 giorni.</p>
+            </div>
+        </section>
+        
+        <hr>
+        
+        <section id="azione" class="data-section action-final">
+            <h2>🤝 Dalla Critica all'Azione: Unisciti al Progetto</h2>
+            <p>La politica del futuro ha bisogno di dati e trasparenza. Contribuisci con la tua esperienza, i tuoi dati o le tue proposte concrete.</p>
+            <a href="#" class="cta-link">INVIA LA TUA PROPOSTA DI RIFORMA</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sicilia Dati & Riforma. Progetto Civico e Analitico.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
